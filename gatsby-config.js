@@ -6,5 +6,33 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `notes`,
+    //     path: `${__dirname}/src/notes/`,
+    //   },
+    // },
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `${__dirname}/src/pages/`,
+    //   },
+    // },
+  ],
+  siteMetadata: {
+    title: 'JobIT Hue',
+    description: 'web dev portfolio',
+    copyright: 'This website is copyright 2021 Web Warrior'
+  }
 }
